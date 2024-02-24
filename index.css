@@ -1,8 +1,8 @@
 .mobile-screen {
 
-	    width: 720px; /* Adjust the width to match the desired mobile screen size */
-    height: 1280px; /* Adjust the height to match the desired mobile screen size */
- background-image:url("https://shranv.github.io/WeddingInvite/download (1).jpeg"); /* Add the URL or path to your background image */
+	    width: 100%; /* Adjust the width to match the desired mobile screen size */
+    height: 100%; /* Adjust the height to match the desired mobile screen size */
+ background-image: url("C:/Users/DELL/OneDrive/Documents/weddinginvitre/images/download (1).jpeg"); /* Add the URL or path to your background image */
 
     background-size: cover;
     background-position: center;
@@ -22,7 +22,7 @@
     transition: opacity 3s, transform 7s;
     margin-top: 60px;
     font-family: 'Tangerine', serif;
-    font-size: 16.6px;
+    font-size:  16.6px;
     text-shadow: 4px 4px 4px #d4d508;
 }
 
@@ -31,4 +31,15 @@
     transform: translateY(0);
 }
 
+/* Media queries for responsive design */
+@media only screen and (min-width: 600px) {
+    .mobile-screen {
+        width: 60%;
+    }
+}
 
+@media only screen and (min-width: 900px) {
+    .mobile-screen {
+        width: 40%;
+    }
+}
