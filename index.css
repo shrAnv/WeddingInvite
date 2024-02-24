@@ -1,9 +1,7 @@
 .mobile-screen {
-
-	    width: 375px; /* Adjust the width to match the desired mobile screen size */
+    width: 375px; /* Adjust the width to match the desired mobile screen size */
     height: 667px; /* Adjust the height to match the desired mobile screen size */
- background-image: url("https://shranv.github.io/WeddingInvite/download (1).jpeg"); /* Add the URL or path to your background image */
-
+    background-image: url("https://shranv.github.io/WeddingInvite/download (1).jpeg"); /* Add the URL or path to your background image */
     background-size: cover;
     background-position: center;
     position: absolute;
