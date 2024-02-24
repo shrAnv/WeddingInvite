@@ -13,7 +13,7 @@
             showElements();
 
             var backgroundImage = new Image();
-            backgroundImage.src = "C:/Users/DELL/OneDrive/Documents/weddinginvitre/images/download (1).jpeg";
+            backgroundImage.src = "https://shranv.github.io/WeddingInvite/download (1).jpeg";
 
             backgroundImage.onload = function () {
                 var element = document.getElementById('dynamicElement');
