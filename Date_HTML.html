@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input and Output</title>
+</head>
+<body>
+    <h1>Format Date</h1>
+    <label for="datesInput">Enter Date(s) (comma-separated):</label>
+    <input type="text" id="datesInput">
+    <button onclick="displayMessage()">Submit</button>
+    <div id="outputMessage"></div>
+
+    <script>
+        function displayMessage() {
+		//March 21,2024 , March 22,2024 , December 23,2024 , October 24,2024 , March 25,2024 , March 26,2024
+            // Get the value entered by the user
+            var datesInput = document.getElementById("datesInput").value;
+            
+            // Split the input dates by comma and trim any leading/trailing whitespace
+          //  var datesArray = datesInput.split(" , ").map(dateStr => dateStr.trim());
+		  var datesArray = datesInput.split(" , ");
+			console.log("displayMessage========"+datesArray);
+			var dateArray=[];
+			for(let i=0;i<datesArray.length;i++){
+				// Split the date string into components
+				var dateComponents = datesArray[i].split(" ");
+
+				// Extract month, day, and year from the components
+				var month = dateComponents[0]; // "March"
+				console.log("displayMessage===month====="+month);
+				var day = dateComponents[1];
+				console.log("displayMessage===day====="+day);
+				var dayArray = day.split(",");
+				day = dayArray[0];
+				console.log("displayMessage===day1====="+day);
+				var year = dayArray[1];
+				console.log("displayMessage===year====="+year);
+				let monthStr = monthStrToNumber(month)
+				console.log("displayMessage===monthStr====="+monthStr);
+				let valDate = day+"-"+monthStr+"-"+year;
+				dateArray.push(valDate);
+				console.log("displayMessage===dateArray====="+dateArray);
+			}
+
+           // Create the output message
+           // var outputMessage = "Formatted Dates:\n";
+
+            // Display the output message
+          //  document.getElementById("outputMessage").textContent = outputMessage;
+	const outputContainer = document.getElementById("outputMessage");
+
+        // Loop through the array and create a new div for each element
+        dateArray.forEach(element => {
+            const divElement = document.createElement("div");
+            divElement.textContent = element;
+            outputContainer.appendChild(divElement); // Append the div to the container
+        });
+        }
+		    function monthStrToNumber(monthStr) {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+			const monthsNew = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            var index = months.indexOf(monthStr);
+			console.log("displayMessage===index====="+index);
+			index=monthsNew[index]
+			
+			return index
+        }
+    </script>
+</body>
+</html>
